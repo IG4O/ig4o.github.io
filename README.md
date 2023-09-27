@@ -6,9 +6,6 @@
 Que esses 4 anos sejam muitos e muitos mais anos juntos ao seu lado!
 > Ainda com brincadeirinhas e coçegas KKKKKK
 
-![WhatsApp Image 2022-09-15 at 12 41 19](https://github.com/IG4O/ig4o.github.io/assets/92439234/c6e13b98-726e-4a12-927d-c4ccdc4f832b)
-> Eu amo essa foto!
-
 Peço perdão por errar contigo e muitas vezes não ouvir o seu **não**. 
 
 Sempre vou te respeitar de todo meu coração.
