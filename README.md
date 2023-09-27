@@ -3,6 +3,9 @@
 
 ### Eu te amo até o céu! 
 
+![WhatsApp Image 2022-09-15 at 12 41 19](https://github.com/IG4O/ig4o.github.io/assets/92439234/c6e13b98-726e-4a12-927d-c4ccdc4f832b)
+> Eu amo essa foto!
+
 Que esses 4 anos sejam muitos e muitos mais anos juntos ao seu lado!
 > Ainda com brincadeirinhas e coçegas KKKKKK
 
