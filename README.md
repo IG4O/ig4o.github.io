@@ -1,4 +1,3 @@
-'''
 import java.util.Scanner;
 
 class Main {
@@ -172,42 +171,3 @@ class Assento{
 
 }
 
-
-
-// // ... (código anterior)
-
-// while (menu != 3) { // Condição de saída do loop
-//     // ... (código do menu permanece o mesmo)
-
-//     switch (cliente) {
-//         case 2:
-//             // ... (código anterior)
-
-//             if (teatro.getAssentos()[fila][assento].getStatusAssento() == '_') {
-//                 teatro.getAssentos()[fila][assento].reservar(estudante);
-//                 // Restante do código
-//             } else {
-//                 System.out.println("Assento já ocupado.");
-//             }
-//             break;
-//         case 3:
-//             System.out.println("Fila e assento da reserva para cancelar");
-//             filaCancelar = scanner.nextInt();
-//             assentoCancelar = scanner.nextInt();
-//             if (filaCancelar >= 0 && filaCancelar < 15 && assentoCancelar >= 0 && assentoCancelar < 10) {
-//                 if (teatro.getAssentos()[filaCancelar][assentoCancelar].getStatusAssento() == 'R') {
-//                     teatro.getAssentos()[filaCancelar][assentoCancelar].cancelarReserva();
-//                     // Restante do código
-//                 } else {
-//                     System.out.println("Assento não está ocupado para ser cancelado.");
-//                 }
-//             } else {
-//                 System.out.println("Assento inválido.");
-//             }
-//             break;
-//     }
-// }
-
-// // ... (código posterior)
-
-'''
