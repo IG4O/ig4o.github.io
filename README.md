@@ -1,173 +1,125 @@
-import java.util.Scanner;
+# Repetição
 
-class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        //System.out.println("####################### PALCO #######################");
+Exercícios presentes no link:
 
-        int menu = 0, adm, lugareslivres , cliente, fila, assento, filaCancelar, assentoCancelar;
-        boolean estudante;
-        int ingressoEstudante = 0;
-        float valorIngresso = 50.00f;
-        float valortotal = 0;
+> https://darlonv.github.io/algoritmos/docs/Controle/Exercicios/Repeticao
 
-        Teatro teatro = new Teatro(15, 10);
 
-        while (true){ //Inserido  o while true para que fique em loop
-            System.out.println("Digite o numero conforme o menu desejado:");
-            System.out.println("1 > Area administrativa");
-            System.out.println("2 > Area de clientes");
-            System.out.println("3 > Sair");
+### 1) Peça ao usuário que digite um valor inteiro n. Mostre na tela os números de 1 até n, em sequência.
 
-            menu = scanner.nextInt();
-            switch (menu){
-                // Area administrativa
-                case 1:
-                    System.out.println("AREA ADMINISTRATIVA");
-                    System.out.println("1 > Modificar o valor do ingresso");
-                    System.out.println("2 > Visualizar mapa de assentos");
-                    System.out.println("3 > valor total arrecadado com os ingressos");
-                    adm = scanner.nextInt();
-                    switch (adm){
-                        case 1:
-                            System.out.println("Digite o novo valor do ingresso: R$");
-                            valorIngresso = scanner.nextFloat();
-                            break;
-                        case 2:
-                            teatro.mostrarMapa();
-                            break;
-                        case 3:
-                   
-                            break;
-                    }
-                    break;
-                // Area cliente
-                case 2:
-                    System.out.println("AREA DO CLIENTE");
-                    System.out.println("1 > Visualizar mapa de assentos");
-                    System.out.println("2 > Realizar reserva");
-                    System.out.println("3 > Cancelar reserva");
-                    cliente = scanner.nextInt();
-                    switch (cliente){
-                        case 1:
-                            teatro.mostrarMapa();
-                            break;
-                        case 2:
-                            System.out.println("Digite a fila e o assento. Ex: 0(fila) 1(assento)");
-                            fila = scanner.nextInt();
-                            assento = scanner.nextInt();
-                            System.out.println("Estudante? (true/false)");
-                            estudante = scanner.nextBoolean();
-                            if(fila >= 0 && fila < 15 && assento >= 0 && assento < 10 ){
-                                if (teatro.getAssentos()[fila][assento].getStatusAssento() == '_') {
-                                    teatro.getAssentos()[fila][assento].reservar(estudante);
-                                    if(estudante){
-                                        ingressoEstudante++;
-                                        valortotal = valorIngresso/2;
-                                    } else {
-                                        valortotal = valorIngresso; 
-                                    }                                                                                                                                           
-                                } else {
-                                    System.out.println("Assento ocupado!");
-                                }               
-                            } else {
-                                System.out.println("Assento invalido!");
-                            }
-                            break;
-                        case 3:
-                            System.out.println("Fila e assentto da reserva para cancelar");
-                            filaCancelar = scanner.nextInt();
-                            assentoCancelar = scanner.nextInt();
-                            if (filaCancelar >= 0  && filaCancelar < 15 && assentoCancelar >= 0 && assentoCancelar < 10){
-                                if(teatro.getAssentos()[filaCancelar][assentoCancelar].getStatusAssento() == 'R'){
-                                    teatro.getAssentos()[filaCancelar][assentoCancelar].reservar(false);
-                                    valortotal -= valorIngresso/2;
-                                    ingressoEstudante--;
-                                } else{
-                                    System.out.println("Assento não está ocupado para ser cancelado. ");
-                                }
-                            } else{
-                                System.out.println("Assento inválido.");
-                            }
-                            break;
-                    }
-                case 3:
-                    System.out.println("Saindo do sistema");
-                    System.exit(0);
-                    break;                    
-                default:
-                    System.out.println("Invalido");                
-            
-            }     
-                   
-        }
+~~~
+public static void main(String[] args) {
+    Scanner entrada = new Scanner(System.in);
+
+    System.out.println("Digite um numero: ");
+    int n = entrada.nextInt();
+    
+    entrada.close();
+    int i = 0;
+    while ( i <= n){
+        System.out.println(i);
+        i++;
+    }
+}
+~~~
+
+### 2) Peça o usuário que digite 5 números, com valores que podem ser entre 0 e 1000. Mostre o maior e menor número digitados.
+
+~~~
+public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
         
-    }
-}
+        int n = 0, 
+        maior = 1000,
+        menor = 0;
 
-// Criei a classe teatro para que a parte da matriz focasse aqui.
-class Teatro{
-    public Assento[][] assento;
-
-    public Teatro(int filas, int colunas) {
-        int i, j;
-        assento = new Assento[filas][colunas];
-        for (i = 0; i < filas; i++) {
-            for (j = 0; j < colunas; j++) {
-                assento[i][j] = new Assento();
+        System.out.println("Digite 5 numeros: ");         
+        int i = 0;
+        while (i < 5){            
+            n = entrada.nextInt();
+            
+            if (n <= 1000 && n >= 0){                  
+                
+                if (n >= menor){
+                    menor = n;                
+                }               
+                if (n <= maior){
+                    maior = n;                
+                }
+                                
             }
+              
+            i++;
         }
-    }
 
-    public void mostrarMapa() {
-        int i, j;
-        System.out.println("#########ESPETACULO#########");
-        for (i = 0; i < assento.length; i++) {
-            for (j = 0; j < assento[i].length; j++) {
-                System.out.print(assento[i][j].getStatusAssento());
-            }
-            System.out.println();
-        }
-    }
-
-    public Assento[][] getAssentos() {
-        return assento;
-    }
+        System.out.printf("Menor numero e: %d e o maior numero e: %d ",maior, menor);        
+        
+        entrada.close();
 }
+~~~
 
-class Assento{
-    public char status;
+### 3) Peça ao usuário que digite um valor inteiro n. Em seguida, apresente os números de n a 1, na ordem do maior para o menor.
 
-    public Assento(){
-        status = '_';
-    }
+~~~
+public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        int n;
 
-    public char getStatusAssento(){
-        return status;
-    }
+        System.out.println("Digite um valor: ");
+        n = entrada.nextInt();
+        entrada.close();
 
-    public void reservar(boolean estudante){
-        if (status == '_'){
-            if(estudante){
-                System.out.println("Reserva de estudante confirmada!"); 
-                               
-            } else {
-                System.out.println("Reserva confirmada");                
-            } 
-            status = 'R';
-        } else {
-            System.out.println("Assento indisponivel");
+        int i = 0;
+        while ( i < n){
+            System.out.println(n);
+            n--;
         }
-    }
+}
+~~~
 
-    public void cancelarReserva(){
-        if (status == 'X'){
-            System.out.println("Reserva cancelada");
-            status = '_';            
-        } else {
-            System.out.println("Assento não está ocupado para ser cancelado.");
-        }
+### 4) Pergunte um número k ao usuário, e mostre a tabuada desse número, com múltiplos de 1 a 20.
+
+~~~
+public static void main(String[] args) {
+    Scanner entrada = new Scanner(System.in);
+    int k , i = 0, resultado;
+
+    System.out.println("Digite um valor para obter sua tabuada: ");
+    k = entrada.nextInt();    
+    entrada.close();
+    
+    System.out.printf("A tabuada de %d até os multiplos de 20 é: \n",k);
+
+    while (i <= 20){
+
+        resultado = k * i;
+        
+        System.out.printf( "%d x %d = %d \n",k, i, resultado);
+        i++;
+    }    
+}
+~~~
+
+### 5) Calcule a soma s e a média m dos primeiros n números, começando por 1, de forma que n é digitado pelo usuário.
+
+~~~
+public static void main(String[] args) {
+    Scanner entrada = new Scanner(System.in);    
+    int s, n, i;
+    float m;
+    
+    System.out.println("Digite um valor: ");
+    n = entrada.nextInt();
+    entrada.close();
+
+    for (i = 1; i < n; i++) {
+
+        s = n + i;
+        m = s/n;
+
+        System.out.printf("A soma e: %d e a media e: %.2f \n", s, m);
     }
 
 }
+~~~
 
