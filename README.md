@@ -1,125 +1,33 @@
-# Repetição
+<p align="center">
+<img src="https://github.com/IG4O/ig4o.github.io/assets/92439234/47673e3c-b6f2-4aa0-881a-b75f80aebde7" alt="" style="width: 300px; height: 300px;" />
+</p>
 
-Exercícios presentes no link:
+<h3 align ="center">
+Igor Calzavara Eichinger <br> 15/06/1999<br>Cascavel, Paraná, Brazil
+</h3>
 
-> https://darlonv.github.io/algoritmos/docs/Controle/Exercicios/Repeticao
+## Sobre:
+Sou apaixonado por tecnologia e pelas inovações que ela traz para facilitar nossas vidas no dia a dia.
+Tenho afinidade com desafios e valorizo trabalhos em equipe nos quais cada membro assume sua responsabilidade para alcançar objetivos comuns.
+Gosto também de edição de vídeos.
+
+## Formação:
+- Técnico em Informática pelo Colégio Estadual Padre Carmelo Perrone.
+- Tecnólogo em Análise e Desenvolvimento de Sistemas pelo Instituto Federal do Paraná campus Cascavel.
+
+## Experiências:
+Trabalhei como desenvolvedor de sistemas na empresa Consilos, onde tive a oportunidade de trabalhar com as linguagens de programação C# e PHP. Durante minha atuação lá, adquiri valioso conhecimento sobre os processos utilizados nos sistemas.
+Além disso, contribuí na Unimed, desempenhando funções de suporte e técnico em infraestrutura. Essa experiência me proporcionou aprendizado significativo sobre como lidar com pessoas nos sistemas.
+
+## Linguagens:
+- C#
+- Java
+- PHP
+- SQL
+- Python
+<br><br><br>
+
+[LinkedIn](https://www.linkedin.com/in/igor-calzavara-eichinger-388bba1b1/ "LinkedIn") | [Instagram](https://www.instagram.com/igor.c.eichinger/ "Instagram") | [Workana](https://www.workana.com/freelancer/8ace78b1f3ce3af7a3f71d2c9ca85df5 "Workana")
 
 
-### 1) Peça ao usuário que digite um valor inteiro n. Mostre na tela os números de 1 até n, em sequência.
-
-~~~
-public static void main(String[] args) {
-    Scanner entrada = new Scanner(System.in);
-
-    System.out.println("Digite um numero: ");
-    int n = entrada.nextInt();
-    
-    entrada.close();
-    int i = 0;
-    while ( i <= n){
-        System.out.println(i);
-        i++;
-    }
-}
-~~~
-
-### 2) Peça o usuário que digite 5 números, com valores que podem ser entre 0 e 1000. Mostre o maior e menor número digitados.
-
-~~~
-public static void main(String[] args) {
-        Scanner entrada = new Scanner(System.in);
-        
-        int n = 0, 
-        maior = 1000,
-        menor = 0;
-
-        System.out.println("Digite 5 numeros: ");         
-        int i = 0;
-        while (i < 5){            
-            n = entrada.nextInt();
-            
-            if (n <= 1000 && n >= 0){                  
-                
-                if (n >= menor){
-                    menor = n;                
-                }               
-                if (n <= maior){
-                    maior = n;                
-                }
-                                
-            }
-              
-            i++;
-        }
-
-        System.out.printf("Menor numero e: %d e o maior numero e: %d ",maior, menor);        
-        
-        entrada.close();
-}
-~~~
-
-### 3) Peça ao usuário que digite um valor inteiro n. Em seguida, apresente os números de n a 1, na ordem do maior para o menor.
-
-~~~
-public static void main(String[] args) {
-        Scanner entrada = new Scanner(System.in);
-        int n;
-
-        System.out.println("Digite um valor: ");
-        n = entrada.nextInt();
-        entrada.close();
-
-        int i = 0;
-        while ( i < n){
-            System.out.println(n);
-            n--;
-        }
-}
-~~~
-
-### 4) Pergunte um número k ao usuário, e mostre a tabuada desse número, com múltiplos de 1 a 20.
-
-~~~
-public static void main(String[] args) {
-    Scanner entrada = new Scanner(System.in);
-    int k , i = 0, resultado;
-
-    System.out.println("Digite um valor para obter sua tabuada: ");
-    k = entrada.nextInt();    
-    entrada.close();
-    
-    System.out.printf("A tabuada de %d até os multiplos de 20 é: \n",k);
-
-    while (i <= 20){
-
-        resultado = k * i;
-        
-        System.out.printf( "%d x %d = %d \n",k, i, resultado);
-        i++;
-    }    
-}
-~~~
-
-### 5) Calcule a soma s e a média m dos primeiros n números, começando por 1, de forma que n é digitado pelo usuário.
-
-~~~
-public static void main(String[] args) {
-    Scanner entrada = new Scanner(System.in);    
-    int s, n, i;
-    float m;
-    
-    System.out.println("Digite um valor: ");
-    n = entrada.nextInt();
-    entrada.close();
-
-    for (i = 1; i < n; i++) {
-
-        s = n + i;
-        m = s/n;
-
-        System.out.printf("A soma e: %d e a media e: %.2f \n", s, m);
-    }
-
-}
-~~~
 
